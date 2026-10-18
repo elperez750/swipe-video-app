@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 "https://github.com/elperez750/swipe-video-app/raw/main/app/videos/cat_video.mp4"));
         list.add(new Video("10000002", "Big Buck Bunny",
                 "A giant rabbit deals with three pesky rodents.",
-                "https://www.w3schools.com/html/mov_bbb.mp4"));
+                "https://github.com/elperez750/swipe-video-app/raw/main/app/videos/nfl.mp4"));
         list.add(new Video("10000003", "Bear Clip",
                 "A short nature clip for testing playback.",
                 "https://www.w3schools.com/html/movie.mp4"));
