@@ -39,15 +39,15 @@ public class MainActivity extends AppCompatActivity {
         list.add(new Video("10000001", "Cat licking itself",
                 "A beautiful cat licking itself",
                 "https://github.com/elperez750/swipe-video-app/raw/main/app/videos/cat_video.mp4"));
-        list.add(new Video("10000002", "Big Buck Bunny",
-                "A giant rabbit deals with three pesky rodents.",
+        list.add(new Video("10000002", "NFL Highlights",
+                "An NFL player getting hit hard",
                 "https://github.com/elperez750/swipe-video-app/raw/main/app/videos/nfl.mp4"));
-        list.add(new Video("10000003", "Bear Clip",
-                "A short nature clip for testing playback.",
-                "https://www.w3schools.com/html/movie.mp4"));
-        list.add(new Video("10000004", "Sintel Trailer",
-                "A short animated trailer from the Blender Foundation.",
-                "https://media.w3.org/2010/05/sintel/trailer.mp4"));
+        list.add(new Video("10000003", "Pushing the limits",
+                "A skater coming down a huge ram.",
+                "https://github.com/elperez750/swipe-video-app/raw/main/app/videos/This-Looks-TERRIFYING-SnapYT.App.mp4"));
+        list.add(new Video("10000004", "How to win at pool",
+                "A man finds a clever way to win in one hit",
+                "https://github.com/elperez750/swipe-video-app/raw/main/app/videos/The-Zeppeli-in-SnapYT.App.mp4"));
         return list;
     }
 }

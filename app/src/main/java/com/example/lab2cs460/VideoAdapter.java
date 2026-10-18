@@ -32,6 +32,16 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         this.videos = videos;
     }
 
+
+
+
+    /**
+     * Inflates the layout for one video page
+     *
+     * @param parent   the ViewGroup the new page will be attached to
+     * @param viewType the view type of the new page (unused, only one type)
+     * @return a new VideoViewHolder for the page
+     */
     @NonNull
     @Override
     public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -40,10 +50,25 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         return new VideoViewHolder(view);
     }
 
+
+    /**
+     * This will fill a page with the video at a given position
+     *
+     * @param holder   The ViewHolder which should be updated to represent the contents of the
+     *                 item at the given position in the data set.
+     * @param position The position of the item within the adapter's data set.
+     */
+
     @Override
     public void onBindViewHolder(@NonNull VideoViewHolder holder, int position) {
         holder.bind(videos.get(position));
     }
+
+
+    /**
+     * This will return the number of videos that we have
+     * @return the size of the video list.
+     */
 
     @Override
     public int getItemCount() {
@@ -101,7 +126,6 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         }
 
         /** Creates an ExoPlayer and starts playing the current video in a loop. */
-        /** Creates an ExoPlayer and starts playing the current video in a loop. */
         void startPlayer() {
             if (player != null || currentUrl == null) {
                 return;
@@ -110,6 +134,12 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             player = new ExoPlayer.Builder(context).build();
             playerView.setPlayer(player);
             player.addListener(new Player.Listener() {
+
+
+                /**
+                 * This will log the error and will show a toast when the playback fails
+                 * @param error The error.
+                 */
                 @Override
                 public void onPlayerError(@NonNull PlaybackException error) {
                     android.util.Log.e("SwipeVideo", "Playback error", error);
@@ -118,6 +148,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                             android.widget.Toast.LENGTH_LONG).show();
                 }
             });
+
+
             player.setMediaItem(MediaItem.fromUri(currentUrl));
             player.setRepeatMode(Player.REPEAT_MODE_ONE);
             player.prepare();
