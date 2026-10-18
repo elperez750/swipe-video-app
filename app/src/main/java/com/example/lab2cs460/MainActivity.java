@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         List<Video> list = new ArrayList<>();
         list.add(new Video("10000001", "Flower Test",
                 "Testing playback.",
-                "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"));
+                "C:\\Users\\elper\\AndroidStudioProjects\\swipe-video-app\\app\\videos"));
         list.add(new Video("10000002", "Big Buck Bunny",
                 "A giant rabbit deals with three pesky rodents.",
                 "https://www.w3schools.com/html/mov_bbb.mp4"));
