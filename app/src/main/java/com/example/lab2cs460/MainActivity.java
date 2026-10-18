@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
     private List<Video> buildVideoList() {
         String base = "https://storage.googleapis.com/gtv-videos-bucket/sample/";
         List<Video> list = new ArrayList<>();
-        list.add(new Video("10000001", "Flower Test",
-                "Testing playback.",
-                "C:\\Users\\elper\\AndroidStudioProjects\\swipe-video-app\\app\\videos"));
+        list.add(new Video("10000001", "Cat licking itself",
+                "A beautiful cat licking itself",
+                "https://github.com/elperez750/swipe-video-app/raw/main/app/videos/cat_video.mp4"));
         list.add(new Video("10000002", "Big Buck Bunny",
                 "A giant rabbit deals with three pesky rodents.",
                 "https://www.w3schools.com/html/mov_bbb.mp4"));
